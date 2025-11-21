@@ -1,0 +1,36 @@
+import numpy as np
+
+x=np.array([8,10,12])
+y=np.array([10,13,16])
+
+x1=np.mean(x)
+y1=np.mean(y)
+
+print('mean of x= ',x1)
+print('mean of y= ',y1)
+
+
+dev_x = []
+print('deviation of x:')
+for i in range(len(x)):
+  dev = x1-x[i]
+  dev_x.append(dev)
+  print(dev)
+  squrd_dev_x=dev_x*dev_x
+print('sum of squared deviation of x:',sum(squrd_dev_x))
+  
+
+dev_y= []
+print('deviation of y:')
+for i in range(len(y)):
+  dev = y1-y[i]
+  dev_y.append(dev)
+  print(dev)
+
+prod_dev = []
+print('Product of deviation: ')
+for i in range(len(x)):
+    p = dev_x[i] * dev_y[i]
+    prod_dev.append(p)
+    print(p)
+print('sum of product of deviation =', sum(prod_dev))
